@@ -1,0 +1,5 @@
+export const GET_USER_STATUS = 'GET_USER_STATUS'
+export const SET_USER = 'SET_USER'
+
+export const GET_SUPER_USER_STATUS = 'GET_SUPER_USER_STATUS'
+export const SET_SUPER_USER = 'SET_SUPER_USER'

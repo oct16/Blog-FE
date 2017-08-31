@@ -1,0 +1,77 @@
+pre {
+    position: relative;
+    background-color: #f6f6f6;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8AgMAAABHkjHhAAAACVBMVEWAgIBaWlo+Pj7rTFvWAAAAA3RSTlMHCAw+VhR4AAAA+klEQVQoz4WSMW7EQAhFPxKWNh2FCx+HkaZI6RRb5DYbyVfIJXLKDCFoMbaTKSw/8ZnPAPjaH2xgZcUNUDADD7D9LtDBCLZ45fbkvo/30K8yeI64pPwl6znd/3n/Oe93P3ho9qeh72btTFzqkz0rsJle8Zr81OLEwZ1dv/713uWqvu2pl+k0fy7MWtj9r/tN5q/02z89qa/L4Dc2LvM93kezPfXlME/O86EbY/V9GB9ePX8G1/6W+/9h1dq/HGfTfzT3j/xNo7522Bfnqe5jO/fvhVthlfk434v3iO9zG/UOphyPeinPl1J8Gtaa7xPTa/Dk+RIs4deMvwGvcGsmsCvJ0AAAAABJRU5ErkJggg==);
+    background-size: 30px,30px;
+    padding: 1rem;
+}
+
+code {
+    font-size: .8rem;
+}
+
+code.hljs.css:after,code.hljs.javascript:after,code.hljs.xml:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #ccc;
+    text-align: right;
+    font-size: 1em;
+    padding: 2px 10px 0;
+    line-height: 15px;
+    height: 15px
+}
+
+code.hljs.xml:after {
+    content: 'HTML'
+}
+
+code.hljs.javascript:after {
+    content: 'JavaScript'
+}
+
+code.hljs.css:after {
+    content: 'CSS'
+}
+
+
+.hljs {
+    padding: .5em;
+    font-family: Source Code Pro,Consolas,Menlo,Monaco,Courier New,monospace
+}
+
+.diff .hljs-header,.hljs-comment,.hljs-doctype,.hljs-javadoc,.hljs-pi,.hljs-template_comment,.lisp .hljs-string {
+    color: #93a1a1
+}
+
+.css .hljs-tag,.hljs-addition,.hljs-keyword,.hljs-request,.hljs-status,.hljs-winutils,.method,.nginx .hljs-title {
+    color: #859900
+}
+
+.hljs-command,.hljs-hexcolor,.hljs-link_url,.hljs-number,.hljs-phpdoc,.hljs-regexp,.hljs-rules .hljs-value,.hljs-string,.hljs-tag .hljs-value,.tex .hljs-formula {
+    color: #2aa198
+}
+
+.css .hljs-function,.hljs-built_in,.hljs-chunk,.hljs-decorator,.hljs-id,.hljs-identifier,.hljs-localvars,.hljs-title,.vhdl .hljs-literal {
+    color: #268bd2
+}
+
+.haskell .hljs-type,.hljs-attribute,.hljs-class .hljs-title,.hljs-constant,.hljs-link_reference,.hljs-parent,.hljs-variable,.lisp .hljs-body,.smalltalk .hljs-number {
+    color: #b58900
+}
+
+.clojure .hljs-title,.css .hljs-pseudo,.diff .hljs-change,.hljs-attr_selector,.hljs-cdata,.hljs-header,.hljs-pragma,.hljs-preprocessor,.hljs-preprocessor .hljs-keyword,.hljs-shebang,.hljs-special,.hljs-subst,.hljs-symbol,.hljs-symbol .hljs-string {
+    color: #cb4b16
+}
+
+.hljs-deletion,.hljs-important {
+    color: #dc322f
+}
+
+.hljs-link_label {
+    color: #6c71c4
+}
+
+.tex .hljs-formula {
+    background: #eee8d5
+}

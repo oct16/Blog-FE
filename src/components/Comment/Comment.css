@@ -1,0 +1,103 @@
+@import '../../styles/variables';
+
+.container {
+  max-width: var(--max-content-width);
+  margin: 0 auto 0 auto;
+  padding: 1rem;
+  box-sizing: border-box;
+  background: white;
+  /*margin: 0 auto;*/
+}
+
+.commentLength {
+  padding: 1rem 0;
+}
+
+.lists{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.list {
+  border-top: 1px solid var(--color-border);
+  padding: 1rem 0;
+  font-size: .9rem;
+
+  img {
+    vertical-align: middle;
+    border-radius: 50%;
+    border: 1px solid var(--color-border);
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  span {
+    margin-left: .4rem;
+  }
+}
+
+.userInfo {
+  margin: 0 0 .4rem 0;
+}
+
+input {
+  /*margin: 1rem 0;*/
+  max-width: 300px;
+  box-sizing: border-box;
+}
+
+.nickName {
+  margin-bottom: .4rem;
+}
+.commentMask, textarea {
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  box-sizing: border-box;
+}
+.commentMask {
+  z-index: 1;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+}
+textarea {
+  padding: .6rem .3rem;
+}
+.commentArea {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  margin-top: .4rem;
+}
+
+.centerContainer {
+  margin: auto;
+  position: absolute;
+  left: 0;
+  top:0;
+  bottom: 0;
+  right: 0;
+  width: 200px;
+  height: 80px;
+  text-align: center;
+
+  img {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+
+  .login {
+    text-decoration: underline;
+    color: var(--color-font-light);
+  }
+
+}
+
+.submit {
+  margin-top: 1rem;
+  color: var(--color-font-light)
+}
+
+.buttonShow {
+  color: var(--color-font-default)
+}

@@ -1,0 +1,35 @@
+@import '../../styles/variables';
+
+.root {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.container {
+  margin: 1rem auto 0 auto;
+  /*padding: 0 0 40px;*/
+  background: white;
+  padding: 0 1rem;
+  box-sizing: border-box;
+  max-width: var(--max-content-width);
+  border-radius: 4px;
+}
+
+.postItem + .postItem{
+  border-top: 1px solid var(--color-border);
+}
+.postItem {
+  padding: 2rem 0;
+}
+
+.postTitle {
+  margin: 0;
+  margin-bottom: 1rem;
+  line-height: 1.5rem;
+  font-size: 1.2rem;
+}
+
+.operateLink {
+  font-size: .9rem;
+  margin-left: 5px;
+}

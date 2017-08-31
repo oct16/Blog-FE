@@ -1,0 +1,22 @@
+@import '../../styles/variables.css';
+
+.root {
+}
+
+.container {
+  margin: 0 auto;
+  padding: 1rem 0 .6rem 0;
+  max-width: var(--max-content-width);
+  text-align: center;
+  font-size: .6rem;
+  /*line-height: 1rem;*/
+}
+
+.spacer {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.text,
+.link {
+  padding: 2px 5px;
+}

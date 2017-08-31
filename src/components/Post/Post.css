@@ -1,0 +1,20 @@
+@import '../../styles/variables';
+
+.container {
+  text-align: center;
+  margin: 1rem auto 0 auto;
+  /*padding: 1rem 0 3rem 0;*/
+  border: 1px solid transparent;
+  box-sizing: border-box;
+  background: var(--color-white);
+  max-width: var(--max-content-width);
+}
+.title {
+  margin: 3rem 01
+}
+.content {
+  padding: 0 1rem;
+  text-align: left;
+  line-height: 2rem;
+  font-size: 1.08rem
+}

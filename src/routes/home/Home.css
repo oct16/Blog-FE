@@ -1,0 +1,54 @@
+@import '../../styles/variables';
+
+.root {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.container {
+  margin: 1rem auto 0 auto;
+  /*padding: 0 0 40px;*/
+  background: white;
+  padding: 0 1rem;
+  box-sizing: border-box;
+  max-width: var(--max-content-width);
+  border-radius: 4px;
+}
+
+.postContainer {
+  /*width: 70%;*/
+}
+
+.postItem + .postItem{
+  border-top: 1px solid var(--color-border);
+}
+.postItem {
+  padding: 2rem 0;
+}
+
+.postTitle {
+  margin: 0;
+  margin-bottom: 1rem;
+  line-height: 1.5rem;
+  font-size: 1.2rem;
+  a {
+    color: var(--color-font-dark);
+  }
+}
+
+.postDesc {
+  text-align: justify;
+  line-height: 1.8rem;
+  * {
+    font-size: .9rem !important;
+  }
+}
+
+.postInfo {
+  width: 70px;
+  margin: 1.5rem auto;
+  padding: .3rem;
+  border: 1px solid var(--color-border);
+  text-align: center;
+  font-size: .8rem
+}

@@ -1,0 +1,39 @@
+.root {
+  float: right;
+}
+
+.link {
+  display: inline-block;
+  padding: 3px 8px;
+  text-decoration: none;
+  font-size: 1em; /* ~18px */
+}
+
+.link {
+  transition: all ease-in-out 0.2s;
+}
+.link,
+.link:active,
+.link:visited {
+  color: #999;
+}
+
+.link:hover {
+  color: #666;
+}
+
+.highlight {
+  margin-right: 8px;
+  margin-left: 8px;
+  border-radius: 3px;
+  background: rgba(0, 0, 0, 0.15);
+  color: #fff;
+}
+
+.highlight:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.spacer {
+  color: rgba(255, 255, 255, 0.3);
+}
