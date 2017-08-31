@@ -10,7 +10,7 @@ const VIRTUAL_HOST = 'http://' + VIRTUAL_HOST
 
 module.exports = {
 
-  domain: 'oct16.cn',
+  domain: VIRTUAL_HOST_NAME,
   virtualHost: VIRTUAL_HOST,
   virtualHostName: VIRTUAL_HOST_NAME,
   // link address prefix placeholder
