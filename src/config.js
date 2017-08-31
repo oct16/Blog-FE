@@ -6,7 +6,7 @@
 const isProd = process.env.NODE_ENV === 'production'
 
 const VIRTUAL_HOST_NAME = 'oct16.cn'
-const VIRTUAL_HOST = 'http://' + VIRTUAL_HOST
+const VIRTUAL_HOST = 'http://' + VIRTUAL_HOST_NAME
 
 module.exports = {
 
