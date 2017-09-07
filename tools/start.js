@@ -5,14 +5,16 @@ import webpackHotMiddleware from 'webpack-hot-middleware';
 import WriteFilePlugin from 'write-file-webpack-plugin';
 import run from './run';
 import runServer from './runServer';
-import webpackConfig from './webpack.config';
+import webpackClientConfig from './webpack.client.config';
+import webpackServerConfig from './webpack.server.config';
 import clean from './clean';
 import copy from './copy';
 
 const isDebug = !process.argv.includes('--release');
 process.argv.push('--watch');
 
-const [clientConfig, serverConfig] = webpackConfig;
+const [clientConfig, serverConfig] = [webpackClientConfig, webpackServerConfig];
+const webpackConfig = [clientConfig, serverConfig]
 
 /**
  * Launches a development web server with "live reload" functionality -

@@ -23,11 +23,11 @@ const store = configureStore(preloadedState)
 const context = {
   // Enables critical path CSS rendering
   // https://github.com/kriasoft/isomorphic-style-loader
-  insertCss: (...styles) => {
-    // eslint-disable-next-line no-underscore-dangle
-    const removeCss = styles.map(x => x._insertCss());
-    return () => { removeCss.forEach(f => f()); };
-  },
+  // insertCss: (...styles) => {
+  //   // eslint-disable-next-line no-underscore-dangle
+  //   const removeCss = styles.map(x => x._insertCss());
+  //   return () => { removeCss.forEach(f => f()); };
+  // },
   // Universal HTTP client
   fetch: createFetch({
     baseUrl: window.App.apiUrl,
@@ -43,8 +43,8 @@ if (window.history && 'scrollRestoration' in window.history) {
 }
 
 let onRenderComplete = function initialRenderComplete() {
-  const elem = document.getElementById('css');
-  if (elem) elem.parentNode.removeChild(elem);
+  // const elem = document.getElementById('css');
+  // if (elem) elem.parentNode.removeChild(elem);
   onRenderComplete = function renderComplete(route, location) {
     document.title = route.title;
 

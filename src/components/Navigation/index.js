@@ -1,7 +1,7 @@
 import React from 'react';
 import cx from 'classnames';
 import PropTypes from 'prop-types';
-import withStyles from 'isomorphic-style-loader/lib/withStyles';
+
 import s from './Navigation.css';
 import Link from '../Link';
 import jsCookie from 'js-cookie'
@@ -38,4 +38,4 @@ class Navigation extends React.Component {
   }
 }
 
-export default withStyles(s)(Navigation);
+export default Navigation

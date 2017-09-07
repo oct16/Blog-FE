@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import withStyles from 'isomorphic-style-loader/lib/withStyles';
+
 import s from './adminModify.css';
 import Link from '../../components/Link';
 import history from '../../history';
@@ -116,4 +116,4 @@ class AdminModify extends React.Component {
   }
 }
 
-export default withStyles(s)(AdminModify);
+export default AdminModify

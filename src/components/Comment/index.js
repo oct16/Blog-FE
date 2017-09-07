@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import withStyles from 'isomorphic-style-loader/lib/withStyles';
+
 import s from './Comment.css';
 import Comment from '../../containers/comment';
 import Highlight from 'react-highlight'
@@ -88,7 +88,7 @@ class Post extends React.Component {
                 </div>
               )
           }
-          <textarea placeholder="请输入评论" onChange={this.textAreaValChange} value={this.state.textAreaVal}></textarea>
+          <textarea className={s.textarea} placeholder="请输入评论" onChange={this.textAreaValChange} value={this.state.textAreaVal}></textarea>
         </div>
         <button className={cs(s.submit, isButtonShow)} onClick={this.commitComment}>评论</button>
       </div>
@@ -96,4 +96,4 @@ class Post extends React.Component {
   }
 }
 
-export default withStyles(s)(Post);
+export default Post

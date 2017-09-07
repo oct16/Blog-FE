@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import withStyles from 'isomorphic-style-loader/lib/withStyles';
+
 import s from './Contact.css';
 
 class Contact extends React.Component {
@@ -20,4 +20,4 @@ class Contact extends React.Component {
   }
 }
 
-export default withStyles(s)(Contact);
+export default Contact

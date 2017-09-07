@@ -6,10 +6,8 @@
 }
 
 .container {
-  margin: 1rem auto 0 auto;
-  /*padding: 0 0 40px;*/
+  margin: 0 auto;
   background: white;
-  padding: 0 1rem;
   box-sizing: border-box;
   max-width: var(--max-content-width);
   border-radius: 4px;

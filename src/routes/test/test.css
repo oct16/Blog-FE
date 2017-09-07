@@ -1,0 +1,6 @@
+@import '../../styles/variables';
+
+.root {
+  padding-left: 20px;
+  padding-right: 20px;
+}

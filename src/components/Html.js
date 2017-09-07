@@ -1,12 +1,3 @@
-/**
- 
- *
- 
- *
- 
- 
- */
-
 import React from 'react'
 import PropTypes from 'prop-types'
 import serialize from 'serialize-javascript'
@@ -18,10 +9,7 @@ class Html extends React.Component {
   static propTypes = {
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
-    styles: PropTypes.arrayOf(PropTypes.shape({
-      id: PropTypes.string.isRequired,
-      cssText: PropTypes.string.isRequired,
-    }).isRequired),
+    styles: PropTypes.array.isRequired,
     scripts: PropTypes.arrayOf(PropTypes.string.isRequired),
     app: PropTypes.object, // eslint-disable-line
     children: PropTypes.string.isRequired,
@@ -43,16 +31,17 @@ class Html extends React.Component {
           <meta name="description" content={description} />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-          {styles.map(style => (
+          {/* {styles.map(style => (
             <style
               key={style.id}
               id={style.id}
-              dangerouslySetInnerHTML={{ __html: style.cssText }}
+              dangerouslySetInnerHTML={{ __html: style }}
             />
-          ))}
+          ))} */}
+          {styles.map((style, index) => <link rel="stylesheet" type="text/css" key={index} href={style} />)}
         </head>
         <body>
-          <div id="app" dangerouslySetInnerHTML={{ __html: children }} />
+          <div id="app" className="app" dangerouslySetInnerHTML={{ __html: children }} />
           <script dangerouslySetInnerHTML={{ __html: `window.__PRELOADED_STATE__ = ${JSON.stringify(preloadedState)}` }} />
           <script dangerouslySetInnerHTML={{ __html: `window.App=${serialize(app)}` }} />
           {scripts.map(script => <script key={script} src={script} />)}

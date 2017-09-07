@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './NotFound.css';
 
 class NotFound extends React.Component {
@@ -20,4 +19,4 @@ class NotFound extends React.Component {
   }
 }
 
-export default withStyles(s)(NotFound);
+export default NotFound;

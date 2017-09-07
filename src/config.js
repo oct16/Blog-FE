@@ -8,6 +8,8 @@ const isProd = process.env.NODE_ENV === 'production'
 const VIRTUAL_HOST_NAME = 'oct16.cn'
 const VIRTUAL_HOST = 'http://' + VIRTUAL_HOST_NAME
 
+const API_PORT = isProd ? 3016 : 3015
+
 module.exports = {
 
   domain: VIRTUAL_HOST_NAME,
@@ -25,13 +27,13 @@ module.exports = {
 
   // Node.js app
   port: process.env.PORT || isProd ? 3010 : 3009,
-  proxyPort: 3016,
+  proxyPort: API_PORT,
   // API Gateway
   api: {
     // API URL to be used in the client-side code
     clientUrl: process.env.API_CLIENT_URL || '',
     // API URL to be used in the server-side code
-    serverUrl: process.env.API_SERVER_URL || `${isProd ? VIRTUAL_HOST : 'http://localhost'}:${process.env.PORT || 3016}`,
+    serverUrl: process.env.API_SERVER_URL || `${isProd ? VIRTUAL_HOST : 'http://localhost'}:${process.env.PORT || API_PORT}`,
   },
 
   // Web analytics

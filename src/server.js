@@ -9,7 +9,7 @@ import PrettyError from 'pretty-error'
 import App from './components/App'
 import Html from './components/Html'
 import { ErrorPageWithoutStyle } from './routes/error/ErrorPage'
-import errorPageStyle from './routes/error/ErrorPage.css'
+// import errorPageStyle from './routes/error/ErrorPage.css'
 import createFetch from './createFetch'
 import router from './router'
 import assets from './assets.json'
@@ -65,26 +65,26 @@ app.get([config.rootPath + '/*', config.rootPath],
   },
   async (req, res, next) => {
   try {
-    const css = new Set()
+
+    // const css = new Set()
     // Global (context) variables that can be easily accessed from any React component
     // https://facebook.github.io/react/docs/context.html
 
     // redux initial --------------------------
-    const counter = 3
     const superUser = req.superUser
     const user = req.user
     // Compile an initial state
-    const preloadedState = { counter, user, superUser }
+    const preloadedState = { user, superUser }
     // Create a new Redux store instance
     const store = configureStore(preloadedState)
 
     const context = {
       // Enables critical path CSS rendering
       // https://github.com/kriasoft/isomorphic-style-loader
-      insertCss: (...styles) => {
-        // eslint-disable-next-line no-underscore-dangle
-        styles.forEach(style => css.add(style._getCss()))
-      },
+      // insertCss: (...styles) => {
+      //   // eslint-disable-next-line no-underscore-dangle
+      //   styles.forEach(style => css.add(style._getCss()))
+      // },
       // Universal HTTP client
       fetch: createFetch({
         baseUrl: config.api.serverUrl,
@@ -100,7 +100,7 @@ app.get([config.rootPath + '/*', config.rootPath],
     })
 
     if (route.redirect) {
-      res.redirect(route.status || 302, route.redirect)
+      res.redirect(route.status || 302, config.rootPath + route.redirect)
       return
     }
 
@@ -113,7 +113,7 @@ app.get([config.rootPath + '/*', config.rootPath],
       </Provider>
     )
     data.styles = [
-      { id: 'css', cssText: [...css].join('') },
+      assets.client.css
     ]
     data.scripts = [
       assets.vendor.js,
@@ -148,7 +148,7 @@ app.use((err, req, res, next) => {
     <Html
       title="Internal Server Error"
       description={err.message}
-      styles={[{ id: 'css', cssText: errorPageStyle._getCss() }]}
+      // styles={[{ id: 'css', cssText: errorPageStyle._getCss() }]}
     >
       {ReactDOM.renderToString(<ErrorPageWithoutStyle error={err} />)}
     </Html>,

@@ -3,8 +3,8 @@ import Layout from '../../components/Layout'
 
 export default {
 
-  path: '/',
-  name: 'home',
+  path: '/test',
+  name: 'test',
 
   async action({ fetch }) {
     const resp = await fetch('/api/v1/posts')
@@ -12,13 +12,13 @@ export default {
     // if (!posts || !posts.length) posts = []
     // throw new Error('Failed to load the posts feed.')
 
-    const Home = await new Promise((resolve) => {
-       require.ensure([], (require) => resolve(require('./Home').default), 'home');
+    const Test = await new Promise((resolve) => {
+       require.ensure([], (require) => resolve(require('./Test').default), 'test');
      });
 
     return {
-      title: 'Posts',
-      component: <Layout><Home posts={posts} /></Layout>,
+      title: 'test',
+      component: <Layout><Test posts={posts} /></Layout>,
     }
   },
 }
