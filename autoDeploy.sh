@@ -2,6 +2,6 @@
 
 echo auto deploying...
 git add -A
-git commit -m 'auto deploy'
+git commit -n -m 'auto deploy'
 git push origin master
 shipit default deploy
