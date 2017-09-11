@@ -4,7 +4,7 @@ component: ContentPage
 ---
 # 关于我
 
-你们好，我是冯帆，一名普通的Web程序员。最爱的编程语言是 JavaScript
+你们好，我是FengFan，一名普通的Web程序员。最爱的编程语言是 JavaScript
 
 我曾经在 [一起网](http://yiqixxx.com) 和 [朋友印象](http://www.pyyx.com/) 工作
 

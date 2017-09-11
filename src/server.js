@@ -42,9 +42,9 @@ app.use(bodyParser.json())
 //
 // Register server-side rendering middleware
 // -----------------------------------------------------------------------------
-app.get('/', function (req, res) {
-  res.redirect(301, config.rootPath)
-})
+// app.get('/', function (req, res) {
+//   res.redirect(301, config.rootPath)
+// })
 
 app.use('/login', require('./login').router)
 

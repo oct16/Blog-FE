@@ -19,7 +19,7 @@ class Header extends React.Component {
       <div className={s.root}>
         <div className={cs(s.container, this.state.isHeaderHidden ? s.hidden : '')}>
           <Navigation/>
-        <Link className={s.logo} to="/home">
+        <Link className={s.logo} to="/">
             {/* <img src={logoUrl} srcSet={`${logoUrl2x} 2x`} width="38" height="38" alt="React" /> */}
           <span className={s.logoTxt}>Oct16</span>
           </Link>

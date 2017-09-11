@@ -16,7 +16,7 @@ module.exports = {
   virtualHost: VIRTUAL_HOST,
   virtualHostName: VIRTUAL_HOST_NAME,
   // link address prefix placeholder
-  rootPath: '/blog',
+  rootPath: '',
 
   oAuth: {
     github: {
