@@ -1,5 +1,5 @@
 import fetch from 'isomorphic-fetch'
-import config from './config'
+import config from 'config'
 
 type Options = {
   baseUrl: string,

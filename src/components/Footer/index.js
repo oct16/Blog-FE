@@ -1,6 +1,6 @@
 import React from 'react';
 import s from './Footer.css';
-import Link from '../Link';
+import Link from 'components/Link';
 
 class Footer extends React.Component {
   render() {

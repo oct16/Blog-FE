@@ -1,5 +1,5 @@
 import createBrowserHistory from 'history/createBrowserHistory';
-import config from './config';
+import config from 'config';
 
 // Navigation manager, e.g. history.push('/home')
 // https://github.com/mjackson/history

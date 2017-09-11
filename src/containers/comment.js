@@ -1,7 +1,7 @@
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import comment from 'components/Comment'
-import * as userAction from '../actions/user'
+import * as userAction from 'actions/user'
 
 const mapStateToProps = (state) => ({
   user: state.user

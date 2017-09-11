@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import s from './Comment.css';
-import Comment from '../../containers/comment';
+import Comment from 'containers/comment';
 import Highlight from 'react-highlight'
 import githubLogo from './github.svg'
-import { timeFormat } from '../../common'
+import { timeFormat } from 'common'
 import cs from 'classnames'
 class Post extends React.Component {
   constructor(props) {

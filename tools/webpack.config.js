@@ -66,7 +66,8 @@ const config = {
             // https://github.com/babel/babel/tree/master/packages/babel-plugin-transform-react-jsx-self
             ...isDebug ? ['transform-react-jsx-self'] : [],
             ["module-resolver", {
-              "root": ["./src"]
+              "root": ["./src"],
+              "config": "../config.js"
             }]
           ]
         }

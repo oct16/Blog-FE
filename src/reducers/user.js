@@ -1,4 +1,4 @@
-import { SET_USER } from '../constants/ActionTypes'
+import { SET_USER } from 'constants/ActionTypes'
 
 const initialState = {
   user: {}

@@ -1,8 +1,8 @@
 /* eslint-disable global-require */
 
 // The top-level (parent) route
-import config from '../config'
-import loading from '../common/loading/index'
+import config from 'config'
+import loading from 'common/loading/index'
 
 export default {
 

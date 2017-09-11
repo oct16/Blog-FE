@@ -1,4 +1,4 @@
-const oAuth = require('./config').oAuth;
+const oAuth = require('config').oAuth;
 import express from 'express'
 import createFetch from './createFetch';
 

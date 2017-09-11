@@ -1,6 +1,7 @@
-import * as types from '../constants/ActionTypes'
+import * as types from 'constants/ActionTypes'
 import jsCookie from 'js-cookie'
-import history from '../history'
+import history from 'history'
+import config from 'config'
 export const setSuperUser = (superUser) => (dispatch) => {
   dispatch({
     type: types.SET_SUPER_USER,
@@ -17,6 +18,6 @@ export const logout = () => (dispatch) => {
   // clean cookie
   jsCookie.remove("token")
   if (/\/admin/.test(location.pathname)) {
-    history.push('/')
+    history.push(config.indexPath)
   }
 }

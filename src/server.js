@@ -13,7 +13,7 @@ import { ErrorPageWithoutStyle } from './routes/error/ErrorPage'
 import createFetch from './createFetch'
 import router from './router'
 import assets from './assets.json'
-import config from './config'
+import config from 'config'
 import proxy from './proxy'
 
 import configureStore from './store/configureStore'

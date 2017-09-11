@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import s from './Login.css';
-import history from '../../history';
+import history from 'history';
 import jsCookie from 'js-cookie';
-import { setSuperUser } from '../../actions/superUser';
+import { setSuperUser } from 'actions/superUser';
 
 class Login extends React.Component {
   constructor(props) {

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import s from './Admin.css';
 import Link from 'components/Link';
-import history from '../../history';
+import history from 'history';
 
 
 

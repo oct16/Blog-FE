@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import s from './adminModify.css';
 import Link from 'components/Link';
-import history from '../../history';
+import history from 'history';
 
 class AdminModify extends React.Component {
   constructor(props) {

@@ -4,7 +4,7 @@
 //
 
 import proxy from 'http-proxy-middleware'
-import config from './config'
+import config from 'config'
 const isProd = process.env.NODE_ENV === 'production'
 
 const proxyOptions = {

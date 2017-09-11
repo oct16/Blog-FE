@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import s from './Post.css';
-import Comment from '../../containers/comment';
+import Comment from 'containers/comment';
 import Highlight from 'react-highlight'
 
 class Post extends React.Component {

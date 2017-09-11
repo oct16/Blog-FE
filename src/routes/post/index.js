@@ -21,7 +21,7 @@ export default {
     if (!post) throw new Error('Failed to load the post.')
 
     const Post = await new Promise((resolve) => {
-       require.ensure([], (require) => resolve(require('../../components/Post').default), 'post');
+       require.ensure([], (require) => resolve(require('components/Post').default), 'post');
      })
     return {
       title,

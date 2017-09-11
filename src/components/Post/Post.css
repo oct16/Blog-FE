@@ -3,7 +3,7 @@
 .container {
   text-align: center;
   margin: 1rem auto 0 auto;
-  padding: 1rem 3rem;
+  padding: 1rem 2rem;
   border: 1px solid transparent;
   box-sizing: border-box;
   background: var(--color-white);
@@ -18,15 +18,6 @@
   line-height: 2rem;
   font-size: 1.08rem
 }
-
-/*:root {
-
-  @media screen and (max-width: 300px) {
-
-  }
-
-}*/
-
 
 @media (--small-viewport) {
   .container {
