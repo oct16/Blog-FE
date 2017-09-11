@@ -33,7 +33,7 @@ export default {
     const route = await next();
 
     // Provide default values for title, description etc.
-    route.title = `${route.title} - Oct16.cn`;
+    route.title = `${route.title} - oct16.cn`;
     route.description = route.description || '';
     setTimeout(() => {
       loading.done()
