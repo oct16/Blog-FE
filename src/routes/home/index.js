@@ -1,9 +1,9 @@
 import React from 'react'
-import Layout from '../../components/Layout'
+import Layout from 'components/Layout'
 
 export default {
 
-  path: '/',
+  path: '/home',
   name: 'home',
 
   async action({ fetch }) {

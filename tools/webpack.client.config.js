@@ -27,7 +27,6 @@ const clientConfig = {
     filename: isDebug ? '[name].js' : '[name].[chunkhash:8].js',
     chunkFilename: isDebug ? '[name].chunk.js' : '[name].[chunkhash:8].chunk.js',
   },
-
   module: {
     ...config.module,
 

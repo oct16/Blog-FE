@@ -2,12 +2,32 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { DatePicker, message } from 'antd'
 
+import CSSTransition from 'react-transition-group/CSSTransition';
+
+const Fade = ({ children, ...props }) => (
+<CSSTransition
+  {...props}
+  timeout={500}
+  classNames="fade">
+  {children}
+</CSSTransition>
+)
+
 class Test extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      date: ''
+      date: '',
+      show: false
     }
+  }
+
+  componentDidMount () {
+
+  }
+
+  transitionClick = () => () => {
+    this.setState({ show: !this.state.show })
   }
 
   handleChange = () => (d) => {
@@ -17,12 +37,14 @@ class Test extends React.Component {
     }
     this.setState({ date: d })
   }
-
   render() {
     return (
-      <div style={{ width: 400, margin: '100px auto' }}>
+      <div style={{ width: 300, margin: '100px auto' }}>
         <DatePicker onChange={this.handleChange()} />
         <div style={{ marginTop: 20 }}>Date: {this.state.date.toString()}</div>
+        <Fade in={this.state.show}>
+          <div><button onClick={this.transitionClick()}>transition</button></div>
+        </Fade>
       </div>
     )
   }

@@ -65,6 +65,9 @@ const config = {
             // Adds __self attribute to JSX which React will use for some warnings
             // https://github.com/babel/babel/tree/master/packages/babel-plugin-transform-react-jsx-self
             ...isDebug ? ['transform-react-jsx-self'] : [],
+            ["module-resolver", {
+              "root": ["./src"]
+            }]
           ]
         }
       },
@@ -73,6 +76,7 @@ const config = {
         include: [
           path.resolve(__dirname, '../node_modules'),
           path.resolve(__dirname, '../src/styles'),
+          path.resolve(__dirname, '../src/common'),
         ],
         use: [
           {

@@ -9,6 +9,7 @@ import webpackClientConfig from './webpack.client.config';
 import webpackServerConfig from './webpack.server.config';
 import clean from './clean';
 import copy from './copy';
+import beforeBuild from './beforeBuild';
 
 const isDebug = !process.argv.includes('--release');
 process.argv.push('--watch');
@@ -23,6 +24,7 @@ const webpackConfig = [clientConfig, serverConfig]
 async function start() {
   await run(clean);
   await run(copy);
+  await run(beforeBuild);
   await new Promise((resolve) => {
     // Save the server-side bundle files to the file system after compilation
     // https://github.com/webpack/webpack-dev-server/issues/62

@@ -2,6 +2,7 @@
 
 // The top-level (parent) route
 import config from '../config'
+import loading from '../common/loading/index'
 
 export default {
 
@@ -18,19 +19,24 @@ export default {
     require('./adminModify').default,
     require('./adminNew').default,
     require('./test').default,
+    require('./resume').default,
 
     // Wildcard routes, e.g. { path: '*', ... } (must go last)
     require('./notFound').default,
   ],
 
   async action({ next }) {
+
+    loading.start()
     // Execute each child route until one of them return the result
     const route = await next();
 
     // Provide default values for title, description etc.
     route.title = `${route.title} - Oct16.cn`;
     route.description = route.description || '';
-
+    setTimeout(() => {
+      loading.done()
+    }, 5e2)
     return route;
   },
 

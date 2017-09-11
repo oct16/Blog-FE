@@ -1,5 +1,6 @@
 import React from 'react'
-import Layout from '../../components/Layout'
+import Layout from 'components/Layout'
+import Transition from 'react-transition-group/Transition';
 
 export default {
 
@@ -7,10 +8,6 @@ export default {
   name: 'test',
 
   async action({ fetch }) {
-    const resp = await fetch('/api/v1/posts')
-    let posts = await resp.json()
-    // if (!posts || !posts.length) posts = []
-    // throw new Error('Failed to load the posts feed.')
 
     const Test = await new Promise((resolve) => {
        require.ensure([], (require) => resolve(require('./Test').default), 'test');
@@ -18,7 +15,8 @@ export default {
 
     return {
       title: 'test',
-      component: <Layout><Test posts={posts} /></Layout>,
+      component: <Layout><Test /></Layout>,
     }
+
   },
 }

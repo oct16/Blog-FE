@@ -15,6 +15,10 @@
   src: url(//fonts.gstatic.com/ea/notosanssc/v1/NotoSansSC-Regular.woff2) format('woff2'), url(//fonts.gstatic.com/ea/notosanssc/v1/NotoSansSC-Regular.woff) format('woff'), url(//fonts.gstatic.com/ea/notosanssc/v1/NotoSansSC-Regular.otf) format('opentype');
 }
 
+* {
+  box-sizing: border-box;
+}
+
 html {
   color: var(--color-font-default);
   font-weight: 200;
@@ -31,7 +35,7 @@ body {
   margin: 0;
 }
 
-.app {
+// .app {
 
   a {
     transition: all ease-in-out 0.2s;
@@ -49,7 +53,7 @@ body {
 
   input, textarea {
     font-size: .9rem;
-    padding: 10px 6px;
+    // padding: 10px 6px;
     border: 1px solid var(--color-border);
     -webkit-appearance: none;
     box-sizing: border-box;
@@ -70,4 +74,4 @@ body {
     color: #fff
   }
 
-}
+// }

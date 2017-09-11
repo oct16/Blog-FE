@@ -8,8 +8,7 @@ import hljscss from '../../styles/hljs.css'
 
 // import normalizeCss from 'normalize.css'
 
-// import s from './Layout.css'
-
+import s from './Layout.css'
 
 import Header from '../Header'
 import Footer from '../Footer'
@@ -21,7 +20,7 @@ class Layout extends React.Component {
 
   render() {
     return (
-      <div>
+      <div id={s.layout}>
         <Header />
         {this.props.children}
         <Footer />

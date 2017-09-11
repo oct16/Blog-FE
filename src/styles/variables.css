@@ -25,6 +25,7 @@
    * ======================================================================== */
 
   --color-bg: #fff;
+  --color-transparent-default: rgba(255,255,255,.8);
   --color-border: #e7e7e7;
   --color-white: #fff;
 
@@ -33,4 +34,11 @@
   --color-font-default: #666;
   --color-font-light: #999;
   --color-font-dark: #333;
+
+  /*
+   * Custom-Media
+   * ======================================================================== */
+
+  @custom-media --small-viewport (max-width: 475px);
+
 }

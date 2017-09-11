@@ -90,7 +90,9 @@ class Post extends React.Component {
           }
           <textarea className={s.textarea} placeholder="请输入评论" onChange={this.textAreaValChange} value={this.state.textAreaVal}></textarea>
         </div>
-        <button className={cs(s.submit, isButtonShow)} onClick={this.commitComment}>评论</button>
+        {
+          !user.name ? "" : (<button className={cs(s.submit, isButtonShow)} onClick={this.commitComment}>评论</button>)
+        }
       </div>
     )
   }

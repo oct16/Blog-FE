@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import s from './Home.css';
-import Link from '../../components/Link';
+import Link from 'components/Link';
 
 class Home extends React.Component {
 

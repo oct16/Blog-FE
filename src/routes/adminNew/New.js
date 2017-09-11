@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import s from './New.css';
-import Link from '../../components/Link';
+import Link from 'components/Link';
 import history from '../../history';
 
 class AdminNew extends React.Component {

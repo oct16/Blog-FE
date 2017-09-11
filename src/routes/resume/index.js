@@ -4,7 +4,7 @@ import Page from 'components/Page';
 
 export default {
 
-  path: '/about',
+  path: '/resume',
 
   async action() {
     const data = await require.ensure([], require => require('./about.md'), 'about');

@@ -25,7 +25,6 @@ const serverConfig = {
     filename: '../../server.js',
     libraryTarget: 'commonjs2',
   },
-
   module: {
     ...config.module,
 
