@@ -1,5 +1,5 @@
 .root {
-  width: 300px;
+  width: 320px;
   height: 400px;
   margin: 0 auto;
   margin-top: 160px;
@@ -45,7 +45,7 @@
   list-style: none;
   li {
     display: inline-block;
-    margin: 0 .4rem;
+    margin: 0 .2rem;
     a {
       overflow: hidden;
       display: inherit;

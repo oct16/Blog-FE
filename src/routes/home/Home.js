@@ -7,6 +7,8 @@ import zhihu from './zhihu.svg'
 import mail from './mail.svg'
 import blog from './blog.svg'
 import facebook from './facebook.svg'
+import linkin from './linkin.svg'
+import twitter from './twitter.svg'
 import Link from 'components/Link'
 import s from './Home.css'
 import Footer from 'components/Footer'
@@ -45,6 +47,8 @@ class Home extends React.Component {
             <li><a target="_blank" href="https://www.zhihu.com/people/oct16"><img src={zhihu}/></a></li>
             <li><a target="_blank" href="mailto:mail@fengfan.me"><img src={mail}/></a></li>
             <li><a target="_blank" href="https://facebook.com/fengfan.me"><img src={facebook}/></a></li>
+            <li><a target="_blank" href=""><img src={twitter}/></a></li>
+            <li><a target="_blank" href=""><img src={linkin}/></a></li>
             <li><Link to="/posts"><img src={blog}/></Link></li>
           </ul>
         </div>

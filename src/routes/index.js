@@ -39,6 +39,5 @@ export default {
       loading.done()
     }, 5e2)
     return route;
-  },
-
-};
+  }
+}
