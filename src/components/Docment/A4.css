@@ -1,0 +1,26 @@
+.root {
+  margin: 4rem
+}
+
+.container {
+
+}
+
+.actions {
+  margin: 4rem 0;
+  text-align: center;
+  button {
+    margin: 0 1rem;
+  }
+}
+
+.page {
+  width: 21cm;
+  min-height: 29.7cm;
+  padding: 1rem 2rem 2rem;
+  margin: 0 auto;
+  border: 1px #D3D3D3 solid;
+  border-radius: 5px;
+  background: white;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+}

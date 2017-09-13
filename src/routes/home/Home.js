@@ -16,16 +16,7 @@ import Footer from 'components/Footer'
 class Home extends React.Component {
   constructor(props) {
     super(props)
-    this.state = {
-      date: '',
-      show: false
-    }
   }
-
-  componentDidMount () {
-
-  }
-
 
   render() {
     return (

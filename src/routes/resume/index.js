@@ -1,17 +1,16 @@
 import React from 'react';
 import Layout from 'components/Layout';
-import Page from 'components/Page';
+import A4Doc from 'components/Docment/A4';
 
 export default {
-
   path: '/resume',
-
   async action() {
-    const data = await require.ensure([], require => require('./about.md'), 'about');
+
+    const data = await require.ensure([], require => require('./resume.md'), 'resume');
     return {
-      title: data.title,
-      chunk: 'about',
-      component: <Layout><Page {...data} /></Layout>,
+      title: 'Resume',
+      chunk: 'resume',
+      component: <A4Doc {...data} />
     };
   },
 
