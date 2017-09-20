@@ -10,9 +10,9 @@ export default {
 
   // Keep in mind, routes are evaluated in order
   children: [
+    require('./home').default,
     require('./posts').default,
     require('./post').default,
-    require('./contact').default,
     require('./login').default,
     require('./about').default,
     require('./admin').default,
@@ -20,7 +20,7 @@ export default {
     require('./adminNew').default,
     require('./test').default,
     require('./resume').default,
-    require('./home').default,
+    require('./resume-purty').default,
 
     // Wildcard routes, e.g. { path: '*', ... } (must go last)
     require('./notFound').default,

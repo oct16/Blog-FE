@@ -2,6 +2,7 @@ import path from 'path';
 import fetch from 'node-fetch';
 import { writeFile, makeDir } from './lib/fs';
 import runServer from './runServer';
+// import makePDF from './makePDF';
 
 // Enter your paths here which you want to render as static
 // Example:
@@ -13,13 +14,12 @@ import runServer from './runServer';
 //   '/page/name/', // => build/public/page/name/index.html
 // ];
 const routes = [
+  '/resume',
+  '/resume/purty',
   '/',
-  '/contact',
-  '/login',
-  '/register',
   '/about',
-  '/privacy',
-  '/404', // https://help.github.com/articles/creating-a-custom-404-page-for-your-github-pages-site/
+  '/login',
+  // '/404', // https://help.github.com/articles/creating-a-custom-404-page-for-your-github-pages-site/
 ];
 
 async function render() {
@@ -47,7 +47,23 @@ async function render() {
     console.info(`#${index + 1} ${dist} => ${response.status} ${response.statusText} (${time} ms)`);
   }));
 
+  // await cover()
   server.kill('SIGTERM');
 }
+
+// const coverTarget = [
+//   "/resume/purty"
+// ]
+// async function cover() {
+//   let tasks = []
+//   coverTarget.forEach(path => {
+//     if (routes.indexOf(path) >= 0) {
+//       tasks.push(path)
+//     }
+//   })
+//
+//   if (!tasks.length) return console.log('coverPDf\'s tasks is empty')
+//   await makePDF(tasks)
+// }
 
 export default render;

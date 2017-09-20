@@ -1,5 +1,6 @@
 import React from 'react';
-import s from './A4.css';
+import Resume from './Resume';
+import s from './ResumeWrap.css';
 import Link from 'components/Link';
 import PropTypes from 'prop-types';
 
@@ -25,22 +26,15 @@ class A4 extends React.Component {
 
   render() {
 
-    const { html, title } = this.props;
-
     return (
       <div className={s.root}>
         <div className={s.container}>
           <div className={s.actions}>
-            <button>下载简历</button>
-            <button>转发简历</button>
+            <a className="button" href="mailto:?cc=mail@fengfan.me&subject=转发--冯小帆的简历--Web前端工程师&body=简历地址 https://oct16.cn/resume">转发简历</a>
+            {/* <a className="button" href="/resume-purty.pdf">下载简历</a> */}
             <button onClick={this.printPage}>打印简历</button>
           </div>
-          <div id="resume" size="A4" className={s.page}>
-            <h1 style={{'textAlign': 'center'}}>简历</h1>
-            <div
-              dangerouslySetInnerHTML={{ __html: html }}
-            />
-          </div>
+          <Resume {...this.props}/>
         </div>
       </div>
     )

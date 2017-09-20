@@ -5,6 +5,7 @@ import s from './Login.css';
 import history from 'history';
 import jsCookie from 'js-cookie';
 import { setSuperUser } from 'actions/superUser';
+import { message } from 'antd'
 
 class Login extends React.Component {
   constructor(props) {
@@ -55,16 +56,15 @@ class Login extends React.Component {
       this.context.store.dispatch(setSuperUser(res.user))
       history.push('/admin')
     }, (err) => {
-      alert(err.message)
+      message.error(err.message)
     })
-
   }
 
   render() {
     return (
       <div className={s.root}>
         <div className={s.container}>
-          <h1>{this.props.title}</h1>
+          <h1>Admin {this.props.title}</h1>
           <form onSubmit={this.loginSubmit}>
             <div className={s.formGroup}>
               <label className={s.label} htmlFor="email">

@@ -38,6 +38,11 @@ class Link extends React.Component {
     event.preventDefault();
 
     let to = this.props.to
+
+    let path = location.pathname
+    if (to === path) {
+      return
+    }
     history.push(to);
   };
 
