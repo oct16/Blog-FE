@@ -34,7 +34,7 @@ app.use('/api', proxy)
 //
 // Register Node.js middleware
 // -----------------------------------------------------------------------------
-app.get(express.static(__dirname + '/public'))
+app.get(express.static(path.resolve(__dirname, '../public')))
 app.use(cookieParser())
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
@@ -49,7 +49,7 @@ app.use(bodyParser.json())
 app.use('/login', require('./login').router)
 
 app.get([
-  config.rootPath + '/*',
+  config.rootPath + '/:foo*',
   config.rootPath
 ],
   function (req, res, next) {
