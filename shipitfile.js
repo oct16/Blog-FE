@@ -32,7 +32,7 @@ module.exports = function (shipit) {
   })
 
   shipit.blTask('build', function() {
-    return shipit.remote(`cd ${shipit.currentPath} && yarn build -- --release`)
+    return shipit.remote(`cd ${shipit.currentPath} && yarn build -- --release --static`)
   })
 
   shipit.blTask('run', function() {
