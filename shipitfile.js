@@ -20,7 +20,7 @@ module.exports = function (shipit) {
 
 
   shipit.on('published', function () {
-    return shipit.start(['install', 'build', 'clearn', 'run'])
+    return shipit.start(['install', 'clearn', 'build', 'run'])
   })
 
   shipit.blTask('install', function() {
