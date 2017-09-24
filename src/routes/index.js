@@ -26,7 +26,7 @@ export default {
     require('./notFound').default,
   ],
 
-  async action({ next }) {
+  async action({ next, url }) {
 
     loading.start()
     // Execute each child route until one of them return the result
@@ -38,6 +38,10 @@ export default {
     setTimeout(() => {
       loading.done()
     }, 5e2)
+
+    if (process.env.NODE_ENV === 'production') {
+      global._hmt && global._hmt.push(['_trackPageview', url]);
+    }
     return route;
   }
 }

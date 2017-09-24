@@ -17,8 +17,6 @@ module.exports = function (shipit) {
     }
   })
 
-
-
   shipit.on('published', function () {
     return shipit.start(['install', 'clearn', 'build', 'run'])
   })

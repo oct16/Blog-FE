@@ -41,6 +41,7 @@ module.exports = {
   analytics: {
     // https://analytics.google.com/
     googleTrackingId: process.env.GOOGLE_TRACKING_ID, // UA-XXXXX-X
+    baiduId: "d056582d8675c16777709371de2fb688",
   },
 
   // Authentication
