@@ -58,13 +58,9 @@ class Html extends React.Component {
           {process.env.NODE_ENV === 'production' && config.analytics.baiduId &&
             <script
             dangerouslySetInnerHTML={{ __html:
-              `var _hmt = _hmt || [];
-              (function() {
-                var hm = document.createElement("script");
-                hm.src = "https://hm.baidu.com/hm.js?${config.analytics.baiduId}";
-                var s = document.getElementsByTagName("script")[0];
-                s.parentNode.insertBefore(hm, s);
-              })();`
+              `var _hmt = _hmt || [];(function() {var hm = document.createElement("script");` +
+              `hm.src = "https://hm.baidu.com/hm.js?${config.analytics.baiduId}";` +
+              `var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm, s);})();`
             }} />
           }
         </body>
