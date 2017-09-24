@@ -40,7 +40,7 @@ module.exports = {
   // Web analytics
   analytics: {
     // https://analytics.google.com/
-    googleTrackingId: process.env.GOOGLE_TRACKING_ID, // UA-XXXXX-X
+    googleTrackingId: process.env.GOOGLE_TRACKING_ID || 'UA-106964022-1', // UA-XXXXX-X
     baiduId: "d056582d8675c16777709371de2fb688",
   },
 

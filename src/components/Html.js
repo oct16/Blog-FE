@@ -45,13 +45,13 @@ class Html extends React.Component {
           <script dangerouslySetInnerHTML={{ __html: `window.__PRELOADED_STATE__ = ${JSON.stringify(preloadedState)}` }} />
           <script dangerouslySetInnerHTML={{ __html: `window.App=${serialize(app)}` }} />
           {scripts.map(script => <script key={script} src={script} />)}
-          {config.analytics.googleTrackingId &&
+          {process.env.NODE_ENV === 'production' && config.analytics.googleTrackingId &&
             <script
               dangerouslySetInnerHTML={{ __html:
               'window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;' +
               `ga('create','${config.analytics.googleTrackingId}','auto');ga('send','pageview')` }} />
           }
-          {config.analytics.googleTrackingId &&
+          {process.env.NODE_ENV === 'production' && config.analytics.googleTrackingId &&
             <script src="https://www.google-analytics.com/analytics.js" async defer />
           }
 

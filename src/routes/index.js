@@ -40,7 +40,8 @@ export default {
     }, 5e2)
 
     if (process.env.NODE_ENV === 'production') {
-      global._hmt && global._hmt.push(['_trackPageview', url]);
+      global._hmt && global._hmt.push(['_trackPageview', url])
+      global.ga && global.ga('send', 'pageview', url)
     }
     return route;
   }
