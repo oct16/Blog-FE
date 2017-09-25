@@ -5,6 +5,7 @@ import { spawn } from './lib/cp';
  * Deploy the contents of the `/build` folder to a remote server via Git.
  */
 async function deploy() {
+  console.log(process.cwd() + '/autoDeploy.sh')
   await spawn(process.cwd() + '/autoDeploy.sh');
 }
 
