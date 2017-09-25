@@ -40,8 +40,12 @@ export default {
     }, 5e2)
 
     if (process.env.NODE_ENV === 'production') {
-      global._hmt && global._hmt.push(['_trackPageview', url])
-      global.ga && global.ga('send', 'pageview', url)
+      if (config.analytics.baiduId) {
+        global._hmt && global._hmt.push(['_trackPageview', url])
+      }
+      if (config.analytics.googleTrackingId) {
+        global.ga && global.ga('send', 'pageview', url)
+      }
     }
     return route;
   }
