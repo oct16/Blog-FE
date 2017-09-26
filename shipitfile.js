@@ -13,7 +13,7 @@ module.exports = function (shipit) {
       keepReleases: 5,
       key: '~/.ssh/id_rsa',
       shallowClone: true,
-      servers: 'root@108.61.160.127'
+      servers: 'root@97.64.19.213:27471'
     }
   })
 
@@ -35,6 +35,6 @@ module.exports = function (shipit) {
 
   shipit.blTask('run', function() {
     // docker run -e VIRTUAL_HOST=oct16.cn -p 3010:3010 -d --name blog_fe --link blog_be:server -v /home/blog_fe/current:/app node /bin/bash -c "cd /app/build && node server.js"
-    return shipit.remote(`docker run -e VIRTUAL_HOST=${config.domain} -p 3010:3010 -d --name blog_fe --link blog_be:server -v ${shipit.currentPath}:/app node /bin/bash -c "cd /app/build && node server.js"`)
+    return shipit.remote(`docker run -p 3010:3010 -d --name blog_fe --link blog_be:server -v ${shipit.currentPath}:/app node /bin/bash -c "cd /app/build && node server.js"`)
   })
 }

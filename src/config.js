@@ -5,16 +5,10 @@
 // }
 const isProd = process.env.NODE_ENV === 'production'
 
-const VIRTUAL_HOST_NAME = 'oct16.cn'
-const VIRTUAL_HOST = 'http://' + VIRTUAL_HOST_NAME
-
 const API_PORT = isProd ? 3016 : 3015
 
 module.exports = {
 
-  domain: VIRTUAL_HOST_NAME,
-  virtualHost: VIRTUAL_HOST,
-  virtualHostName: VIRTUAL_HOST_NAME,
   // link address prefix placeholder
   rootPath: '',
   indexPath: '/posts',
