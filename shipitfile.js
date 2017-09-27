@@ -38,6 +38,6 @@ module.exports = function (shipit) {
   })
 
   shipit.blTask('run', function() {
-    return shipit.remote(`docker run -e API_HOST= -p 3010:3010 -d --name blog_fe -v ${shipit.currentPath}:/app node /bin/bash -c "cd /app/build && node server.js"`)
+    return shipit.remote(`docker run -p 3010:3010 -d --name blog_fe -v ${shipit.currentPath}:/app node /bin/bash -c "cd /app/build && node server.js"`)
   })
 }
