@@ -18,7 +18,7 @@ module.exports = function (shipit) {
   })
 
   shipit.on('published', function () {
-    return shipit.start(['install', 'clearn', 'build', 'run'])
+    return shipit.start(['install', 'clearn', 'build', 'config', 'run'])
   })
 
   shipit.blTask('install', function() {
@@ -31,6 +31,10 @@ module.exports = function (shipit) {
 
   shipit.blTask('build', function() {
     return shipit.remote(`cd ${shipit.currentPath} && yarn build -- --release --static`)
+  })
+
+  shipit.blTask('config', function() {
+    return shipit.remote(`cd ${shipit.currentPath} && cp -rf tools/nginx/* /usr/local/nginx/conf/ && nginx -s reload`)
   })
 
   shipit.blTask('run', function() {
