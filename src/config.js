@@ -3,9 +3,13 @@
 // if (process.env.BROWSER) {
 //   throw new Error('Do not import `config.js` from inside the client-side code.');
 // }
+
+const IP = require('../tools/lib/ip')()
+
 const isProd = process.env.NODE_ENV === 'production'
 
 const API_PORT = isProd ? 3016 : 3015
+const API_HOST = `http://${isProd ? IP : 'localhost'}`
 
 module.exports = {
 
@@ -28,7 +32,7 @@ module.exports = {
     // API URL to be used in the client-side code
     clientUrl: process.env.API_CLIENT_URL || '',
     // API URL to be used in the server-side code
-    serverUrl: process.env.API_SERVER_URL || `${isProd ? VIRTUAL_HOST : 'http://localhost'}:${process.env.PORT || API_PORT}`,
+    serverUrl: process.env.API_SERVER_URL || `${API_HOST}:${process.env.PORT || API_PORT}`,
   },
 
   // Web analytics

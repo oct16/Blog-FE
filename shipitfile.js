@@ -34,7 +34,6 @@ module.exports = function (shipit) {
   })
 
   shipit.blTask('run', function() {
-    // docker run -e VIRTUAL_HOST=oct16.cn -p 3010:3010 -d --name blog_fe --link blog_be:server -v /home/blog_fe/current:/app node /bin/bash -c "cd /app/build && node server.js"
-    return shipit.remote(`docker run -p 3010:3010 -d --name blog_fe --link blog_be:server -v ${shipit.currentPath}:/app node /bin/bash -c "cd /app/build && node server.js"`)
+    return shipit.remote(`docker run -p 3010:3010 -d --name blog_fe -v ${shipit.currentPath}:/app node /bin/bash -c "cd /app/build && node server.js"`)
   })
 }
