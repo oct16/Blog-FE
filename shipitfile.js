@@ -10,7 +10,7 @@ module.exports = function (shipit) {
       branch: 'master',
       ignores: ['.git', 'node_modules', 'README.md', 'shipitfile.js'],
       rsync: ['--del'],
-      keepReleases: 5,
+      keepReleases: 1,
       key: '~/.ssh/id_rsa',
       shallowClone: true,
       servers: 'root@97.64.19.213:27471'
