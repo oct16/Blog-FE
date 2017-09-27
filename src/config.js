@@ -9,7 +9,7 @@ const IP = require('../tools/lib/ip')()
 const isProd = process.env.NODE_ENV === 'production'
 
 const API_PORT = isProd ? 3016 : 3015
-const API_HOST = `http://${isProd ? IP : 'localhost'}`
+const API_HOST = `http://${isProd ? 'api.oct16.cn' : 'localhost'}`
 
 module.exports = {
 
