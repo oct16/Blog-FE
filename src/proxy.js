@@ -8,7 +8,7 @@ import config from 'config'
 const isProd = process.env.NODE_ENV === 'production'
 
 const proxyOptions = {
-  target: `http://localhost:` + config.proxyPort,  // target host
+  target: config.api.serverUrl,  // target host
   logLevel: 'silent',
   secure: false,
   changeOrigin: true,               // needed for virtual hosted sites

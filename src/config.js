@@ -9,7 +9,7 @@ const IP = require('../tools/lib/ip')()
 const isProd = process.env.NODE_ENV === 'production'
 
 const API_PORT = isProd ? 3016 : 3015
-const API_HOST = `http://${isProd ? 'api.oct16.cn' : 'localhost'}`
+const API_URL = `http://${isProd ? 'api.oct16.cn' : 'localhost:' + API_PORT}`
 
 module.exports = {
 
@@ -26,13 +26,13 @@ module.exports = {
 
   // Node.js app
   port: process.env.PORT || isProd ? 3010 : 3009,
-  proxyPort: API_PORT,
+  // proxyPort: API_PORT,
   // API Gateway
   api: {
     // API URL to be used in the client-side code
     clientUrl: process.env.API_CLIENT_URL || '',
     // API URL to be used in the server-side code
-    serverUrl: process.env.API_SERVER_URL || `${API_HOST}:${process.env.PORT || API_PORT}`,
+    serverUrl: process.env.API_SERVER_URL || API_URL,
   },
 
   // Web analytics

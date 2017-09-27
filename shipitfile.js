@@ -34,7 +34,7 @@ module.exports = function (shipit) {
   })
 
   shipit.blTask('config', function() {
-    return shipit.remote(`cd ${shipit.currentPath} && cp -rf tools/nginx/* /usr/local/nginx/conf/ && nginx -s reload`)
+    return shipit.remote(`cd ${shipit.currentPath} && cp -rf tools/nginx/conf/* /usr/local/nginx/conf/ && nginx -s reload`)
   })
 
   shipit.blTask('run', function() {
