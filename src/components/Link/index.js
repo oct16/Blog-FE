@@ -2,29 +2,48 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import history from 'history';
 import config from 'config';
+import s from './link.css';
+import cs from 'classnames'
 
 function isLeftClickEvent(event) {
   return event.button === 0;
 }
 
 function isModifiedEvent(event) {
-  return !!(event.metaKey || event.altKey || event.ctrlKey || event.shiftKey);
+  return !!(event.metaKey || event.altKey || event.ctrlKey || event.shiftKey)
 }
 
 class Link extends React.Component {
+
+  constructor () {
+    super()
+    this.state = {
+      isActive: ''
+    }
+  }
+
   static propTypes = {
     to: PropTypes.string.isRequired,
     children: PropTypes.node.isRequired,
     onClick: PropTypes.func,
-  };
+  }
 
   static defaultProps = {
     onClick: null,
-  };
+  }
+
+  componentWillMount() {
+    this.updateCurrentUrl()
+    if (global.window){
+      const unlisten = history.listen((location, action) => {
+        this.updateCurrentUrl(location.pathname)
+      })
+    }
+  }
 
   handleClick = (event) => {
     if (this.props.onClick) {
-      this.props.onClick(event);
+      this.props.onClick(event)
     }
 
     if (isModifiedEvent(event) || !isLeftClickEvent(event)) {
@@ -35,16 +54,21 @@ class Link extends React.Component {
       return;
     }
 
-    event.preventDefault();
-
+    event.preventDefault()
     let to = this.props.to
+    history.push(to)
+  }
 
-    let path = location.pathname
-    if (to === path) {
-      return
+  updateCurrentUrl = (currentUrl = global.R.url)  => {
+    if (currentUrl) {
+      if (this.props.to === currentUrl) {
+        this.setState({isActive: ' active'})
+        return
+      }
     }
-    history.push(to);
-  };
+    this.setState({isActive: ''})
+    return
+  }
 
   wrapLinkPath = (path) => {
     const rootPath = config.rootPath
@@ -57,7 +81,9 @@ class Link extends React.Component {
 
   render() {
     let { to, children, ...props } = this.props;
-    return <a href={this.wrapLinkPath(to)} {...props} onClick={this.handleClick}>{children}</a>;
+    return <a href={this.wrapLinkPath(to)} {...props}
+      className={cs(props.className, this.state.isActive ? s.active : '' )} 
+      onClick={this.handleClick}>{children}</a>;
   }
 }
 

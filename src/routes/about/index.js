@@ -3,9 +3,7 @@ import Layout from 'components/Layout';
 import Page from 'components/Page';
 
 export default {
-
   path: '/about',
-
   async action() {
     const data = await require.ensure([], require => require('./about.md'), 'about');
     return {

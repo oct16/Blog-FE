@@ -26,12 +26,12 @@ export default {
     require('./notFound').default,
   ],
 
-  async action({ next, url }) {
-
+  async action(R) {
+    global.R = R
+     var { next, url } = R
     loading.start()
     // Execute each child route until one of them return the result
     const route = await next();
-
     // Provide default values for title, description etc.
     route.title = `${route.title} - oct16.cn`;
     route.description = route.description || '';

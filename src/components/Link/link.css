@@ -1,0 +1,4 @@
+@import 'styles/variables';
+.active {
+  color: var(--color-link-dark)!important;
+}
