@@ -14,7 +14,7 @@ class A4 extends React.Component {
   componentDidMount() {
     if (global.window) {
       global.window.onload = () => {
-        particlesJS.load('particles-js', 'vendor/particles/particles.json', function() {
+        particlesJS.load('particles-js', '/vendor/particles/particles.json', function() {
           console.log('callback - particles-js config loaded');
         });
       }
@@ -57,7 +57,7 @@ class A4 extends React.Component {
           </div>
           <Resume {...this.props}/>
         </div>
-        <script src="vendor/particles/particles.js"></script>
+        <script src="/vendor/particles/particles.js"></script>
       </div>
     )
   }
