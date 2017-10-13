@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 
 import s from './adminModify.css';
 import Link from 'components/Link';
-import history from 'history';
+import { message } from 'antd'
+// import qiniu from '../../util/qiniu/index'
 
 class AdminModify extends React.Component {
   constructor(props) {
@@ -28,6 +29,9 @@ class AdminModify extends React.Component {
       content: this.props.post.content,
       comments: this.props.post.comments
     })
+
+    console.log(qiniu)
+
   }
 
   modifyPost = () => {
@@ -36,9 +40,9 @@ class AdminModify extends React.Component {
     const content = this.state.content
 
     this.putPost(id, {title, content}).then(res => {
-      alert('ok')
+      message.success("修改成功")
     }, err => {
-      alert('fail')
+      message.error(err.message)
     })
   }
 

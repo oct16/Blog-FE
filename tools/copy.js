@@ -21,6 +21,7 @@ async function copy() {
     }, null, 2)),
     copyFile('LICENSE.txt', 'build/LICENSE.txt'),
     copyDir('src/public', 'build/public'),
+    copyDir('src/lib', 'build/public'),
   ]);
 
   if (process.argv.includes('--watch')) {

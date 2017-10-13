@@ -17,6 +17,13 @@ module.exports = {
   rootPath: '',
   indexPath: '/posts',
 
+  qiniu: {
+    bucket: "static",
+    domain: "static.fengfan.me",
+    // uptoken: 1,
+    uptoken_url: "/api/v1/admin/qiniu/uptoken"
+  },
+
   oAuth: {
     github: {
       clientID:  isProd ? 'Iv1.32888c90abe982c4' : 'Iv1.b7df2919acd30415',

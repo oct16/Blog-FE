@@ -144,7 +144,7 @@ const config = {
         }]
       },
       {
-        test: /\.(mp4|webm|wav|mp3|m4a|aac|oga)(\?.*)?$/,
+        test: /\.(swf|mp4|webm|wav|mp3|m4a|aac|oga)(\?.*)?$/,
         loader: 'url-loader',
         query: {
           name: isDebug ? '[path][name].[ext]?[hash:8]' : '[hash:8].[ext]',

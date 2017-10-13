@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import s from './New.css';
 import Link from 'components/Link';
 import history from 'history';
+import { message } from 'antd'
 
 class AdminNew extends React.Component {
   constructor(props) {
@@ -26,12 +27,12 @@ class AdminNew extends React.Component {
     const title = this.state.title
     const content = this.state.content
     this.postPost({title, content}).then(res => {
-      alert('ok')
       const postTitle = res.title
       const path = `/post/${decodeURIComponent(postTitle)}`
+      message.success("发布成功")
       history.push(path)
     }, err => {
-      alert(err.Message)
+      message.error(err.message)
     })
   }
 

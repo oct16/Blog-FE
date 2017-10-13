@@ -25,12 +25,14 @@
    * ======================================================================== */
 
   --color-bg: #fff;
+  --color-selection-backgournd: #406d91;
   --color-transparent-default: rgba(255,255,255,.8);
   --color-border: #e7e7e7;
   --color-white: #fff;
 
   --color-link-default: #8590a6;
   --color-link-dark: #333;
+  --color-link-blue: #406d91;
 
   --color-font-default: #666;
   --color-font-light: #999;

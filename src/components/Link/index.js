@@ -35,9 +35,15 @@ class Link extends React.Component {
   componentWillMount() {
     this.updateCurrentUrl()
     if (global.window){
-      const unlisten = history.listen((location, action) => {
-        this.updateCurrentUrl(location.pathname)
+      this.unlisten = history.listen((location, action) => {
+        this.updateCurrentUrl()
       })
+    }
+  }
+
+  componentWillUnmount() {
+    if (global.window){
+      this.unlisten()
     }
   }
 
@@ -82,7 +88,7 @@ class Link extends React.Component {
   render() {
     let { to, children, ...props } = this.props;
     return <a href={this.wrapLinkPath(to)} {...props}
-      className={cs(props.className, this.state.isActive ? s.active : '' )} 
+      className={cs(props.className, this.state.isActive ? s.active : '' )}
       onClick={this.handleClick}>{children}</a>;
   }
 }

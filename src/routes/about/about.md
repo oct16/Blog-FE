@@ -32,4 +32,4 @@ component: ContentPage
 
 [Blog V2016](http://b.fengfan.me) VueJS + Express
 
-[Blog V2015](http://fengfan.me/v1) Express + MongoDB
+[Blog V2015](http://fengfan.me/v1) ExpressMVC

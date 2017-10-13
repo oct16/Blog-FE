@@ -41,6 +41,7 @@
     "nprogress": "^0.2.0",
     "pretty-error": "^2.1.0",
     "prop-types": "^15.5.8",
+    "qiniu-js": "^1.0.22",
     "query-string": "^4.3.4",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
@@ -135,6 +136,9 @@
     "webpack-hot-middleware": "^2.18.0",
     "write-file-webpack-plugin": "^4.0.2"
   },
+  "moduleRoots": [
+    "src"
+  ],
   "babel": {
     "presets": [
       [
