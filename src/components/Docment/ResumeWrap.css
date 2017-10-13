@@ -25,9 +25,13 @@
   border: 1px #D3D3D3 solid;
   border-radius: 5px;
   background: white;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+  background-image: url(data:image/png;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8AgMAAABHkjHhAAAACVBMVEX8/Pz6+vr29vYAnBLWAAAA3UlEQVQoz4VSQRLDIAiEGbx78EE4wwPsoZ/sK6uoBTVJPexkg+wiAJ/1gAAxMRBABUWFBKxfyjvsPBuXNS7zUokqNeLR5Sd/n5z+ez3A7P2xoqi1cqStvrhybtYCmmR+3FMnlyFSnt6b7uoTux/DkW+p3n/j6v/Qb2wijKN/fFGftNCLKuzzPfUwtaeGY57k54NEUPo+VKAym0B7fzf9P5z5nK/Ftf6c1f+XLzzry+e+KA/7PuZrf7nb3wkxnfO9eU/skLsKWtzmg36+6OKhJrHXiw148kD2E8xq1PsF4H1bvgNo+IkAAAAASUVORK5CYII=);
+  box-shadow: 5px 5px 50px rgba(0, 0, 0, 0.15);
   font-size: .95rem;
-  line-height: 1.6rem;
+  line-height: 1.7rem;
+  h1 {
+    margin: 2rem;
+  }
   h4 {
     margin: .5rem;
     a {

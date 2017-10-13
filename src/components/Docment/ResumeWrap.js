@@ -38,7 +38,6 @@ class A4 extends React.Component {
   }
 
   render() {
-
     return (
       <div className={s.root}>
         <style dangerouslySetInnerHTML={{ __html: `
