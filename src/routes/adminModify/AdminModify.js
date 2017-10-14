@@ -29,8 +29,10 @@ class AdminModify extends React.Component {
       content: this.props.post.content,
       comments: this.props.post.comments
     })
-
-    console.log(qiniu)
+    if (global.Qiniu) {
+      delete require.cache[require.resolve('../../util/qiniu')];
+      let q = require('../../util/qiniu')
+    }
 
   }
 
@@ -68,8 +70,6 @@ class AdminModify extends React.Component {
     return resp
   }
 
-
-
   async deleteComment (id) {
     const resp = await this.context.fetch('/api/v1/admin/post/comment/' + id, {
       method: "DELETE"
@@ -97,10 +97,13 @@ class AdminModify extends React.Component {
     return (
       <div className={s.root}>
         <div className={s.container}>
+          <div id="qiniu-uploader">
+            <button id="pickfiles">pickfiles</button>
+          </div>
           <input className={s.title}
             onChange={this.titleChange}
             value={this.state.title}/>
-          <textarea className={s.content}
+          <textarea id="md-editor" className={s.content}
             value={this.state.content}
             onChange={this.contentChange}>
           </textarea>
@@ -115,6 +118,9 @@ class AdminModify extends React.Component {
             ))}
           </ul>
         </div>
+        <script src="/vendor/qiniu/plupload/moxie.js"></script>
+        <script src="/vendor/qiniu/plupload/plupload.js"></script>
+        <script src="/vendor/qiniu/dist/qiniu.min.js"></script>
       </div>
     )
   }

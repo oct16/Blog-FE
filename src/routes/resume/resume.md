@@ -56,7 +56,7 @@ component: ContentPage
     - 自驱、“懒”、有技术野心、拥抱开源、把技术当成生活伙伴
   - #### 擅长解决问题
     - 擅长于通过搜索引擎解决问题（慎用百度）、能熟练阅读英文技术文档，英文技术博客
-    - 常出现在Github、Stackoverflow、Trending、HackerNews、Reddit、Podcast、TechRadar等社区
+    - 常出现在Github、Stackoverflow、TechCrunch、HackerNews、Reddit、Medium等社区
   - #### 自我期望与团队期望
     - 希望接下来的三年时间里能更加深入的研究前端工程
     - 希望更多的参与到后端开发、产品设计中
