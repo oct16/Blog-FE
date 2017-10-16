@@ -47,7 +47,7 @@ async function render() {
     console.info(`#${index + 1} ${dist} => ${response.status} ${response.statusText} (${time} ms)`);
   }));
 
-  await cover()
+  // await cover() // 转换成pdf文件
   server.kill('SIGTERM');
 }
 
