@@ -2,7 +2,7 @@ import path from 'path';
 import fetch from 'node-fetch';
 import { writeFile, makeDir } from './lib/fs';
 import runServer from './runServer';
-import makePDF from './makePDF';
+// import makePDF from './makePDF';
 
 // Enter your paths here which you want to render as static
 // Example:
@@ -47,23 +47,23 @@ async function render() {
     console.info(`#${index + 1} ${dist} => ${response.status} ${response.statusText} (${time} ms)`);
   }));
 
-  await cover()
+  // await cover()
   server.kill('SIGTERM');
 }
 
-const coverTarget = [
-  "/resume/purty"
-]
-async function cover() {
-  let tasks = []
-  coverTarget.forEach(path => {
-    if (routes.indexOf(path) >= 0) {
-      tasks.push(path)
-    }
-  })
-
-  if (!tasks.length) return console.log('coverPDf\'s tasks is empty')
-  await makePDF(tasks)
-}
+// const coverTarget = [
+//   "/resume/purty"
+// ]
+// async function cover() {
+//   let tasks = []
+//   coverTarget.forEach(path => {
+//     if (routes.indexOf(path) >= 0) {
+//       tasks.push(path)
+//     }
+//   })
+//
+//   if (!tasks.length) return console.log('coverPDf\'s tasks is empty')
+//   await makePDF(tasks)
+// }
 
 export default render;

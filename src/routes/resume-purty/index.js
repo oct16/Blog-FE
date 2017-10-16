@@ -6,7 +6,7 @@ export default {
   path: '/resume/purty',
   async action() {
 
-    const data = await require.ensure([], require => require('../resume/resume.md'), 'resume');
+    const data = await require.ensure([], require => require('./resume.md'), 'resume');
     return {
       title: 'Resume-Purty',
       chunk: 'Resume-Purty',

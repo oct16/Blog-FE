@@ -3,8 +3,7 @@
    * Typography
    * ======================================================================== */
 
-  /*--font-family-base: 'Noto Sans TC', 'Microsoft YaHei' sans-serif;*/
-  --font-family-base: Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Noto Sans CJK SC,WenQuanYi Micro Hei,Arial,sans-serif;
+  --font-family-base: 'Noto Sans TC', 'Segoe UI', 'HelveticaNeue-Light', sans-serif;
 
   /*
    * Layout
