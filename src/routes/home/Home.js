@@ -30,7 +30,6 @@ class Home extends React.Component {
           <div className={s.name}>Oct16</div>
           <div className={s.description}>
             Frontend Developer / 程序猿 / 前端汪
-
           </div>
           <ul className={s.intro}>
             <li><a target="_blank" href="https://github.com/oct16"><img src={github}/></a></li>

@@ -1,18 +1,13 @@
 import fetch from 'isomorphic-fetch'
 import config from 'config'
 
-type Options = {
-  baseUrl: string,
-  cookie?: string,
-}
-
 /**
  * Creates a wrapper function around the HTML5 Fetch API that provides
  * default arguments to fetch(...) and is intended to reduce the amount
  * of boilerplate code in the application.
  * https://developer.mozilla.org/docs/Web/API/Fetch_API/Using_Fetch
  */
-function createFetch({ baseUrl = config.api.serverUrl, cookie }: Options) {
+function createFetch({ baseUrl = config.api.serverUrl, cookie }) {
   // NOTE: Tweak the default options to suite your application needs
   const defaults = {
     // method: 'POST', // handy with GraphQL backends
