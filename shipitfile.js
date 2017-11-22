@@ -1,6 +1,6 @@
 module.exports = function (shipit) {
   const config = require('./src/config')
-  require('/Users/oct16/.config/yarn/global/node_modules/shipit-deploy')(shipit)
+  require('shipit-deploy')(shipit)
 
   shipit.initConfig({
     default: {
