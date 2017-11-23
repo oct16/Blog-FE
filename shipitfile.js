@@ -42,7 +42,7 @@ module.exports = function (shipit) {
   })
 
   shipit.blTask('runServer', function() {
-    return shipit.remote(`cd ${shipit.currentPath}/build & pm2 start blog`)
+    return shipit.remote(`cd ${shipit.currentPath}/build & pm2 start server.js --name blog`)
   })
 
   shipit.blTask('runDocker', function() {
