@@ -30,7 +30,7 @@ module.exports = function (shipit) {
   })
 
   shipit.blTask('clean', function() {
-    return shipit.remote(`pm2 delete blog`)
+    return shipit.remote(`pm2 delete blog || true`)
   })
 
   shipit.blTask('build', function() {
