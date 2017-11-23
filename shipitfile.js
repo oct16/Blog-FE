@@ -18,7 +18,7 @@ module.exports = function (shipit) {
   })
 
   shipit.on('published', function () {
-    return shipit.start(['install', 'clean', 'build', /*'config', 'runServer'*/])
+    return shipit.start(['install', 'clean', 'build', /*'config',*/ 'runServer'])
   })
 
   shipit.blTask('install', function() {
@@ -30,7 +30,7 @@ module.exports = function (shipit) {
   })
 
   shipit.blTask('clean', function() {
-    return shipit.remote(`pm2 stop blog`)
+    return shipit.remote(`pm2 delete blog`)
   })
 
   shipit.blTask('build', function() {
