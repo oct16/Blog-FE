@@ -18,7 +18,7 @@ module.exports = function (shipit) {
   })
 
   shipit.on('published', function () {
-    return shipit.start(['install', 'clearn', 'build', /*'config',*/ 'run'])
+    return shipit.start(['install', 'clearn', 'build', /*'config', 'runServer'*/])
   })
 
   shipit.blTask('install', function() {
@@ -37,7 +37,11 @@ module.exports = function (shipit) {
     return shipit.remote(`cd ${shipit.currentPath} && cp -rf tools/nginx/conf/* /usr/local/nginx/conf/ && nginx -s reload`)
   })
 
-  shipit.blTask('run', function() {
+  shipit.blTask('runServer', function() {
+    return shipit.remote(`cd ${shipit.currentPath}/build & node server.js`)
+  })
+
+  shipit.blTask('runDocker', function() {
     return shipit.remote(`docker run -p 3010:3010 -d --name blog_fe -v ${shipit.currentPath}:/app node /bin/bash -c "cd /app/build && node server.js"`)
   })
 }
