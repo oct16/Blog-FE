@@ -18,15 +18,19 @@ module.exports = function (shipit) {
   })
 
   shipit.on('published', function () {
-    return shipit.start(['install', 'clearn', 'build', /*'config', 'runServer'*/])
+    return shipit.start(['install', 'clean', 'build', /*'config', 'runServer'*/])
   })
 
   shipit.blTask('install', function() {
     return shipit.remote(`cd ${shipit.currentPath} && yarn install`)
   })
 
-  shipit.blTask('clearn', function() {
+  shipit.blTask('cleanDocker', function() {
     return shipit.remote(` docker stop blog_fe || true & docker rm -f blog_fe || true`)
+  })
+
+  shipit.blTask('clean', function() {
+    return shipit.remote(`pm2 stop blog`)
   })
 
   shipit.blTask('build', function() {
@@ -38,7 +42,7 @@ module.exports = function (shipit) {
   })
 
   shipit.blTask('runServer', function() {
-    return shipit.remote(`cd ${shipit.currentPath}/build & node server.js`)
+    return shipit.remote(`cd ${shipit.currentPath}/build & pm2 start blog`)
   })
 
   shipit.blTask('runDocker', function() {
