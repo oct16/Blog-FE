@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { timeFormat } from 'common'
 
 import s from './Posts.css';
 import Link from 'components/Link';
@@ -23,13 +24,8 @@ class Posts extends React.Component {
               <article key={item.title} className={s.postItem}>
                 <h3 className={s.postTitle}>
                   <Link to={"/post/" + item.title}>{item.title}</Link>
+                    <time className="time">{timeFormat(+new Date(item.createdAt))}</time>
                 </h3>
-                <Link to={"/post/" + item.title}>
-                  <div className={s.postDesc}
-                    dangerouslySetInnerHTML={{
-                    __html: item.content
-                  }}/>
-                </Link>
               </article>
             ))}
           </div>

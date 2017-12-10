@@ -17,19 +17,26 @@
 }
 
 .postItem + .postItem{
-  border-top: 1px solid var(--color-border);
+  /* border-top: 1px solid var(--color-border); */
 }
 .postItem {
-  padding: 2rem 0;
+  margin: 2rem 0;
 }
 
 .postTitle {
   margin: 0;
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
   line-height: 1.5rem;
   font-size: 1.2rem;
   a {
-    color: var(--color-font-dark);
+    color: var(--color-font-default);
+  }
+  time {
+    float: right;
+    font-size: .8rem;
+    line-height: 1.5rem;
+    font-weight: normal;
+    color: var(--color-font-default);
   }
 }
 
