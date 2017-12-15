@@ -13,7 +13,7 @@
     "not ie < 9"
   ],
   "dependencies": {
-    "antd": "^2.13.0",
+    "antd": "^3.0.1",
     "babel-plugin-import": "^1.4.0",
     "babel-plugin-module-resolver": "^2.7.1",
     "babel-polyfill": "^6.23.0",
@@ -42,8 +42,8 @@
     "pretty-error": "^2.1.0",
     "prop-types": "^15.5.8",
     "query-string": "^4.3.4",
-    "react": "15.6",
-    "react-dom": "^15.5.4",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
     "react-highlight": "^0.10.0",
     "react-lazy-load": "^3.0.12",
     "react-loadable": "^4.0.5",

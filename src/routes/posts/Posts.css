@@ -33,7 +33,7 @@
   }
   time {
     float: right;
-    font-size: .8rem;
+    font-size: .85rem;
     line-height: 1.5rem;
     font-weight: normal;
     color: var(--color-font-default);

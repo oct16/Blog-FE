@@ -1,7 +1,7 @@
 @import 'styles/variables';
 
 .container {
-  text-align: center;
+  /* text-align: center; */
   margin: 1rem auto 0 auto;
   padding: 1rem 2rem;
   border: 1px solid transparent;

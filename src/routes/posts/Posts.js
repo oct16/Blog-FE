@@ -24,7 +24,7 @@ class Posts extends React.Component {
               <article key={item.title} className={s.postItem}>
                 <h3 className={s.postTitle}>
                   <Link to={"/post/" + item.title}>{item.title}</Link>
-                    <time className="time">{timeFormat(+new Date(item.createdAt))}</time>
+                <time className="time">{timeFormat(+new Date(item.created_at))}</time>
                 </h3>
               </article>
             ))}
