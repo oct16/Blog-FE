@@ -19,16 +19,14 @@ class Posts extends React.Component {
     return (
       <div className={s.root}>
         <div className={s.container}>
-          <div className={s.postContainer}>
-            {this.props.posts.map(item => (
-              <article key={item.title} className={s.postItem}>
-                <h3 className={s.postTitle}>
-                  <Link to={"/post/" + item.title}>{item.title}</Link>
+          {this.props.posts.map(item => (
+            <article key={item.title} className={s.postItem}>
+              <h3 className={s.postTitle}>
+                <Link to={"/post/" + item.title}>{item.title}</Link>
                 <time className="time">{timeFormat(+new Date(item.created_at))}</time>
-                </h3>
-              </article>
-            ))}
-          </div>
+              </h3>
+            </article>
+          ))}
         </div>
       </div>
     )

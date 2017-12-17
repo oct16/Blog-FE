@@ -11,7 +11,7 @@ import linkin from './linkin.svg'
 import twitter from './twitter.svg'
 import Link from 'components/Link'
 import s from './Home.css'
-import Footer from 'components/Footer'
+import Footer from 'components/Layout/Footer'
 
 class Home extends React.Component {
   constructor(props) {

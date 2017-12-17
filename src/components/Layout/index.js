@@ -10,8 +10,9 @@ import hljscss from 'styles/hljs.css'
 
 import s from './Layout.css'
 
-import Header from 'components/Header'
-import Footer from 'components/Footer'
+import Header from './Header'
+import Footer from './Footer'
+import Content from './Content'
 
 class Layout extends React.Component {
   static propTypes = {
@@ -22,7 +23,7 @@ class Layout extends React.Component {
     return (
       <div id={s.layout}>
         <Header />
-        {this.props.children}
+        <Content content={this.props.children} />
         <Footer />
       </div>
     )

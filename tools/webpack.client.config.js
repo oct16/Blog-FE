@@ -36,7 +36,7 @@ const clientConfig = {
       if (/css/.test(rule.test.toString())) {
         return {
           ...rule,
-          use: isDebug ? [{loader: 'style-loader'}, ...rule.use] : ExtractTextPlugin.extract(rule.use)
+          use: ExtractTextPlugin.extract(rule.use)
         }
       } else if (/less/.test(rule.test.toString())) {
         return {

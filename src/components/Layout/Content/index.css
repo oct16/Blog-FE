@@ -1,0 +1,13 @@
+@import 'styles/variables';
+
+.content {
+  padding: 0 3rem;
+  background: var(--color-white);
+  max-width: var(--max-content-width);
+}
+
+@media (--small-viewport) {
+  .content {
+    padding: 0 1rem;
+  }
+}

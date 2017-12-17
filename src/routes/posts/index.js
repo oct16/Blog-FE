@@ -13,7 +13,7 @@ export default {
     // throw new Error('Failed to load the posts feed.')
 
     const Posts = await new Promise((resolve) => {
-       require.ensure([], (require) => resolve(require('./Posts').default), 'home');
+       require.ensure([], (require) => resolve(require('components/Posts/Posts').default), 'home');
      });
 
     return {

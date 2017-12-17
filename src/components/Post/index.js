@@ -13,12 +13,11 @@ class Post extends React.Component {
     }).isRequired
   }
 
-  componentDidMount(){
-    this.highlight()
+  componentDidUpdate(){
+    window.onload = () => this.highlight()
   }
-
   highlight () {
-    if (!global.document) return
+    if (!global.window) return
     const blocks = this.contentEl.querySelectorAll('pre code')
     blocks.forEach((block) => {
       hljs.highlightBlock(block);

@@ -1,15 +1,13 @@
 @import 'styles/variables';
 
 .root {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 0 1rem;
 }
 
 .container {
   margin: 1rem auto 0 auto;
   /*padding: 0 0 40px;*/
   background: white;
-  padding: 0 1rem;
   box-sizing: border-box;
   max-width: var(--max-content-width);
   border-radius: 4px;
