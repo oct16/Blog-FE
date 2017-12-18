@@ -4,6 +4,7 @@
   padding: 0 3rem;
   background: var(--color-white);
   max-width: var(--max-content-width);
+  margin: auto;
 }
 
 @media (--small-viewport) {

@@ -1,5 +1,5 @@
 import React from 'react';
-import s from './index.css';
+import s from './Content.css';
 import Link from 'components/Link';
 import PropTypes from 'prop-types'
 

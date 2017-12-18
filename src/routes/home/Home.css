@@ -1,14 +1,38 @@
 .root {
-  width: 320px;
-  height: 400px;
-  margin: 0 auto;
-  margin-top: 160px;
+
 }
 
 .container {
   border: 1px solid transparent;
   width: 300px;
   margin: 0 auto;
+}
+
+.search {
+  padding: 1rem;
+  display: flex;
+  background: #fafafa;
+  img {
+    height: 2.8rem;
+  }
+  input {
+    min-width: 632px;
+    margin-left: 20px;
+    border: none;
+    padding: 1rem;
+  }
+  .googleSearch {
+    cursor: pointer;
+    height: 2rem;
+    transform: translate3d(-38px, 9px, 0);
+  }
+}
+
+.myself {
+  width: 320px;
+  height: 400px;
+  margin: 0 auto;
+  margin-top: 160px;
 }
 
 .logo {
